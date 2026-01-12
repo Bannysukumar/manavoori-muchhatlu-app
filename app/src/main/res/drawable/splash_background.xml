@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base gradient - dark teal to black -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:endColor="@color/splash_gradient_end"
+                android:startColor="@color/splash_gradient_start"
+                android:centerColor="@color/splash_gradient_center"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- Teal glow effect - bottom left -->
+    <item
+        android:bottom="-120dp"
+        android:left="-80dp">
+        <shape android:shape="oval">
+            <size
+                android:width="400dp"
+                android:height="400dp" />
+            <gradient
+                android:centerColor="@color/splash_glow_strong"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="280dp"
+                android:type="radial" />
+        </shape>
+    </item>
+
+    <!-- Teal glow effect - top right -->
+    <item
+        android:right="-100dp"
+        android:top="-100dp">
+        <shape android:shape="oval">
+            <size
+                android:width="380dp"
+                android:height="380dp" />
+            <gradient
+                android:centerColor="@color/splash_glow"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="260dp"
+                android:type="radial" />
+        </shape>
+    </item>
+
+    <!-- Subtle network pattern glow -->
+    <item
+        android:top="0dp"
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:startColor="@android:color/transparent"
+                android:centerColor="#1A2D9AA8"
+                android:endColor="@android:color/transparent"
+                android:type="linear" />
+        </shape>
+    </item>
+
+</layer-list>
+
+

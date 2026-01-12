@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base gradient background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="@color/login_bg_start"
+                android:endColor="@color/login_bg_end"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- Subtle glow effects for network pattern feel -->
+    <item
+        android:top="-100dp"
+        android:left="-50dp">
+        <shape android:shape="oval">
+            <size
+                android:width="300dp"
+                android:height="300dp" />
+            <gradient
+                android:centerColor="@color/login_network_glow"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="200dp"
+                android:type="radial" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="-80dp"
+        android:right="-60dp">
+        <shape android:shape="oval">
+            <size
+                android:width="250dp"
+                android:height="250dp" />
+            <gradient
+                android:centerColor="@color/login_network_glow"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="180dp"
+                android:type="radial" />
+        </shape>
+    </item>
+
+</layer-list>
+

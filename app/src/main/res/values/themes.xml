@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MANAVOORIMUCHHATLU" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_light_outline</item>
+        <item name="android:windowBackground">@drawable/premium_background</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="toolbarStyle">@style/Widget.Muchhatlu.Toolbar</item>
+        <item name="materialButtonStyle">@style/Widget.Muchhatlu.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Muchhatlu.Button.Outlined</item>
+        <item name="materialCardViewStyle">@style/Widget.Muchhatlu.CardView</item>
+        <item name="textInputStyle">@style/Widget.Muchhatlu.TextInputLayout</item>
+        <item name="floatingActionButtonStyle">@style/Widget.Muchhatlu.Fab</item>
+        <item name="circularProgressIndicatorStyle">@style/Widget.Muchhatlu.Progress</item>
+    </style>
+
+    <style name="Theme.MANAVOORIMUCHHATLU" parent="Base.Theme.MANAVOORIMUCHHATLU" />
+
+    <style name="Theme.MANAVOORIMUCHHATLU.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_gradient_start</item>
+        <item name="postSplashScreenTheme">@style/Theme.MANAVOORIMUCHHATLU</item>
+    </style>
+</resources>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:fillViewport="true"
+    tools:context=".activities.AddPostActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Title: Create Post -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_add_post"
+            android:textColor="@color/login_text_glow"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="@color/login_network_glow"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp" />
+
+        <!-- Content Prompt -->
+        <TextView
+            android:id="@+id/textPrompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_whats_happening"
+            android:textColor="@color/login_text_glow"
+            android:textSize="16sp"
+            android:shadowColor="@color/login_network_glow"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+            android:layout_marginTop="24dp" />
+
+        <!-- Content Type Selection Buttons -->
+        <LinearLayout
+            android:id="@+id/layoutContentTypes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textPrompt"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <FrameLayout
+                android:id="@+id/frameTypeText"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/add_post_button_frosted"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_text_glow"
+                    android:layout_gravity="center"
+                    android:contentDescription="Text" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameTypeVideo"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/add_post_button_frosted"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginStart="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_play_triangle"
+                    android:layout_gravity="center"
+                    android:contentDescription="Video" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameTypeImage"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/add_post_button_frosted"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginStart="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_image_mountain"
+                    android:layout_gravity="center"
+                    android:contentDescription="Image" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Main Preview/Input Area -->
+        <FrameLayout
+            android:id="@+id/framePreview"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:background="@drawable/add_post_preview_area"
+            android:minHeight="300dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutContentTypes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp">
+
+            <!-- Preview Image/Video -->
+            <ImageView
+                android:id="@+id/imagePreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:contentDescription="Media preview" />
+
+            <!-- Video Preview -->
+            <VideoView
+                android:id="@+id/videoPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <!-- Placeholder Icon (Play Triangle for video) -->
+            <ImageView
+                android:id="@+id/iconPlaceholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_play_large"
+                android:layout_gravity="center"
+                android:contentDescription="Content placeholder" />
+
+            <!-- Caption Input (for text posts) -->
+            <EditText
+                android:id="@+id/editCaption"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_add_caption"
+                android:inputType="textMultiLine"
+                android:maxLength="1000"
+                android:textColor="@color/login_text_glow"
+                android:textColorHint="#B3FFFFFF"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:background="@android:color/transparent"
+                android:gravity="top|start"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <!-- File Selection Info -->
+        <TextView
+            android:id="@+id/textSelectedFile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_no_file_selected"
+            android:textColor="@color/login_text_glow"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/framePreview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Choose File Button (Hidden - handled by preview area click) -->
+        <Button
+            android:id="@+id/buttonChooseFile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <!-- Region Selection (Hidden for now, can be added later) -->
+        <TextView
+            android:id="@+id/textRegionSummary"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonSelectRegion"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <!-- POST Button -->
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="@string/action_post"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:background="@drawable/add_post_button_post"
+            android:elevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/framePreview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:indeterminateTint="@color/login_text_glow"
+            app:layout_constraintTop_toBottomOf="@id/buttonSubmit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

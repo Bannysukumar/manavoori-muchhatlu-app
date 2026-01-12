@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/home_card_white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- User Info Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Avatar -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="24dp"
+                app:cardBackgroundColor="@color/home_avatar_green"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/textAvatarInitial"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- User Name and Timestamp -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/textUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/home_text_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/textTimestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/home_text_secondary"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+            <!-- More Options -->
+            <ImageButton
+                android:id="@+id/buttonMore"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_more_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/action_more"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+        <!-- Separator Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/home_separator_blue"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Content Area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="top">
+
+            <!-- Media Preview (Video/Image Thumbnail) -->
+            <FrameLayout
+                android:id="@+id/frameMedia"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:visibility="gone"
+                android:background="#E0E0E0">
+
+                <ImageView
+                    android:id="@+id/imageMedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/media_preview" />
+
+                <!-- Play Button Overlay for Video -->
+                <ImageView
+                    android:id="@+id/iconPlay"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_play_white"
+                    android:layout_gravity="center"
+                    android:background="#80000000"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:contentDescription="Play video" />
+
+            </FrameLayout>
+
+            <!-- Caption Text -->
+            <TextView
+                android:id="@+id/textCaption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/home_text_dark"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginStart="12dp"
+                android:maxLines="4"
+                android:ellipsize="end" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical"
+            android:layout_marginTop="16dp">
+
+            <ImageButton
+                android:id="@+id/buttonLike"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/action_like"
+                android:padding="8dp"
+                android:src="@drawable/ic_post_like_outline"
+                android:tint="@color/home_text_secondary" />
+
+            <ImageButton
+                android:id="@+id/buttonComment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/action_comment"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_post_comment"
+                android:tint="@color/home_text_secondary" />
+
+            <ImageButton
+                android:id="@+id/buttonShare"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/action_share"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_post_share"
+                android:tint="@color/home_text_secondary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

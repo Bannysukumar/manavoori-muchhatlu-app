@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_theme_light_primary">#9FA0FF</color>
+    <color name="md_theme_light_onPrimary">#1B1347</color>
+    <color name="md_theme_light_primaryContainer">#43308D</color>
+    <color name="md_theme_light_secondary">#FF99C6</color>
+    <color name="md_theme_light_onSecondary">#2D0F2E</color>
+    <color name="md_theme_light_surface">#0D0719</color>
+    <color name="md_theme_light_onSurface">#F2EDFF</color>
+    <color name="md_theme_light_surfaceVariant">#1C1430</color>
+    <color name="md_theme_light_onSurfaceVariant">#C6BFF2</color>
+    <color name="md_theme_light_outline">#6D5BD0</color>
+    <color name="md_theme_light_background">@android:color/transparent</color>
+    <color name="md_theme_light_onBackground">#F7F2FF</color>
+
+    <!-- Post card styling -->
+    <color name="post_card_surface">#1A132A</color>
+    <color name="post_card_stroke">#33FFFFFF</color>
+    <color name="post_stat_chip_bg">#3323294F</color>
+    <color name="post_action_bg">#1FFFFFFF</color>
+    <color name="post_overlay_text">#FFFFFFFF</color>
+    <color name="post_overlay_subtext">#B3D9FF</color>
+</resources>
+
+

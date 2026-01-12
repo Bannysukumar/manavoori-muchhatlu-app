@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_700">#3700B3</color>
+    <!-- Splash screen colors - updated to match app theme -->
+    <color name="splash_gradient_start">#0A1E2E</color>
+    <color name="splash_gradient_center">#1A3A4E</color>
+    <color name="splash_gradient_end">#000000</color>
+    <color name="splash_glow">#331A5C6B</color>
+    <color name="splash_glow_strong">#4D2D9AA8</color>
+    <color name="splash_card_bg">#33FFFFFF</color>
+    <color name="splash_outline">#40FFFFFF</color>
+    <color name="splash_text_secondary">#B3FFFFFF</color>
+    <color name="splash_teal_accent">#2D9AA8</color>
+
+    <!-- Premium theme palette -->
+    <color name="md_theme_light_primary">#7665FF</color>
+    <color name="md_theme_light_onPrimary">#FFFFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#3F2CC4</color>
+    <color name="md_theme_light_secondary">#FF6FAF</color>
+    <color name="md_theme_light_onSecondary">#FFFFFFFF</color>
+    <color name="md_theme_light_surface">#161028</color>
+    <color name="md_theme_light_onSurface">#F8F6FF</color>
+    <color name="md_theme_light_surfaceVariant">#251C3D</color>
+    <color name="md_theme_light_onSurfaceVariant">#D9D0FF</color>
+    <color name="md_theme_light_outline">#5E4FA8</color>
+    <color name="md_theme_light_background">@android:color/transparent</color>
+    <color name="md_theme_light_onBackground">#FDFBFF</color>
+
+    <!-- Post card styling -->
+    <color name="post_card_surface">#241B3B</color>
+    <color name="post_card_stroke">#40FFFFFF</color>
+    <color name="post_stat_chip_bg">#332E2552</color>
+    <color name="post_action_bg">#26FFFFFF</color>
+    <color name="post_overlay_text">#FDF9FF</color>
+    <color name="post_overlay_subtext">#CCE3FF</color>
+
+    <!-- Login screen colors -->
+    <color name="login_bg_start">#0A1E2E</color>
+    <color name="login_bg_end">#000000</color>
+    <color name="login_teal_start">#1A5C6B</color>
+    <color name="login_teal_end">#2D9AA8</color>
+    <color name="login_orange_start">#B8734A</color>
+    <color name="login_orange_end">#E89A6B</color>
+    <color name="login_input_bg">#33FFFFFF</color>
+    <color name="login_input_stroke">#40FFFFFF</color>
+    <color name="login_text_glow">#FFFFFFFF</color>
+    <color name="login_network_glow">#4D00FFD4</color>
+
+    <!-- Home screen colors -->
+    <color name="home_bg_light">#F5F5F5</color>
+    <color name="home_text_dark">#424242</color>
+    <color name="home_text_secondary">#757575</color>
+    <color name="home_border">#757575</color>
+    <color name="home_post_button">#2E7D32</color>
+    <color name="home_header_teal">#1A5C6B</color>
+    <color name="home_avatar_green">#2E7D32</color>
+    <color name="home_separator_blue">#2196F3</color>
+    <color name="home_card_white">#FFFFFF</color>
+
+    <!-- Admin dashboard colors -->
+    <color name="admin_bg_dark">#0A0E1A</color>
+    <color name="admin_sidebar_green">#1A5C6B</color>
+    <color name="admin_sidebar_green_light">#2D9AA8</color>
+    <color name="admin_sidebar_bg">#CC1A5C6B</color>
+    <color name="admin_card_bg">#33FFFFFF</color>
+    <color name="admin_card_green">#4CAF50</color>
+    <color name="admin_card_blue">#2196F3</color>
+    <color name="admin_card_yellow">#FFC107</color>
+    <color name="admin_card_red">#F44336</color>
+    <color name="admin_card_border_green">#4CAF50</color>
+    <color name="admin_card_border_blue">#2196F3</color>
+    <color name="admin_card_border_yellow">#FFC107</color>
+    <color name="admin_card_border_red">#F44336</color>
+    <color name="admin_card_frosted_bg">#33FFFFFF</color>
+    <color name="admin_card_frosted_blue">#332196F3</color>
+    <color name="admin_card_green_border">#4CAF50</color>
+    <color name="admin_text_white">#FFFFFF</color>
+    <color name="admin_text_grey">#B3FFFFFF</color>
+    <color name="admin_text_secondary">#80FFFFFF</color>
+    <color name="admin_post_card_bg">#33FFFFFF</color>
+    <color name="admin_approve_green">#4CAF50</color>
+    <color name="admin_reject_red">#F44336</color>
+</resources>

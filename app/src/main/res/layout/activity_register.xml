@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:fillViewport="true"
+    tools:context=".activities.RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Profile Image (Hidden - kept for code compatibility) -->
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:contentDescription="@string/content_desc_profile_photo" />
+
+        <Button
+            android:id="@+id/buttonUploadImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonDetectLocation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <!-- Title: Create Account -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_create_account"
+            android:textColor="@color/login_text_glow"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:shadowColor="@color/login_network_glow"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="48dp" />
+
+        <!-- Name Input Field -->
+        <FrameLayout
+            android:id="@+id/frameName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_background"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:minHeight="56dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="#B3FFFFFF"
+                app:hintEnabled="true"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:startIconDrawable="@drawable/ic_person"
+                app:startIconTint="@color/login_text_glow"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/login_text_glow"
+                    android:textColorHint="#B3FFFFFF"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </FrameLayout>
+
+        <!-- Email Input Field -->
+        <FrameLayout
+            android:id="@+id/frameEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_background"
+            app:layout_constraintTop_toBottomOf="@id/frameName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:minHeight="56dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="#B3FFFFFF"
+                app:hintEnabled="true"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:startIconDrawable="@drawable/ic_email"
+                app:startIconTint="@color/login_text_glow"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/login_text_glow"
+                    android:textColorHint="#B3FFFFFF"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </FrameLayout>
+
+        <!-- Mobile Number Input Field -->
+        <FrameLayout
+            android:id="@+id/frameMobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_background"
+            app:layout_constraintTop_toBottomOf="@id/frameEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:minHeight="56dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_mobile_number"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="#B3FFFFFF"
+                app:hintEnabled="true"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:startIconDrawable="@drawable/ic_phone"
+                app:startIconTint="@color/login_text_glow"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textColor="@color/login_text_glow"
+                    android:textColorHint="#B3FFFFFF"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </FrameLayout>
+
+        <!-- Password Input Field -->
+        <FrameLayout
+            android:id="@+id/framePassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_background"
+            app:layout_constraintTop_toBottomOf="@id/frameMobile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:minHeight="56dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_password"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="#B3FFFFFF"
+                app:hintEnabled="true"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_eye_off"
+                app:endIconTint="@color/login_text_glow"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/login_text_glow"
+                    android:textColorHint="#B3FFFFFF"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </FrameLayout>
+
+        <!-- Confirm Password Input Field -->
+        <FrameLayout
+            android:id="@+id/frameConfirmPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_background"
+            app:layout_constraintTop_toBottomOf="@id/framePassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:minHeight="56dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_confirm_password"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="#B3FFFFFF"
+                app:hintEnabled="true"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_eye_off"
+                app:endIconTint="@color/login_text_glow"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/login_text_glow"
+                    android:textColorHint="#B3FFFFFF"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </FrameLayout>
+
+        <!-- State Spinner (Left) -->
+        <FrameLayout
+            android:id="@+id/frameState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_spinner_background"
+            app:layout_constraintTop_toBottomOf="@id/frameConfirmPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/frameDistrict"
+            app:layout_constraintWidth_percent="0.48"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:minHeight="56dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="40dp">
+
+            <Spinner
+                android:id="@+id/spinnerState"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:popupBackground="@drawable/register_spinner_background" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_chevron_down"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp" />
+
+        </FrameLayout>
+
+        <!-- District Spinner (Right) -->
+        <FrameLayout
+            android:id="@+id/frameDistrict"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_spinner_background"
+            app:layout_constraintTop_toTopOf="@id/frameState"
+            app:layout_constraintStart_toEndOf="@id/frameState"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.48"
+            android:layout_marginStart="8dp"
+            android:minHeight="56dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="40dp">
+
+            <Spinner
+                android:id="@+id/spinnerDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:popupBackground="@drawable/register_spinner_background" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_chevron_down"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp" />
+
+        </FrameLayout>
+
+        <!-- Mandal Spinner (Left) -->
+        <FrameLayout
+            android:id="@+id/frameMandal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_spinner_background"
+            app:layout_constraintTop_toBottomOf="@id/frameState"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/frameVillage"
+            app:layout_constraintWidth_percent="0.48"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:minHeight="56dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="40dp">
+
+            <Spinner
+                android:id="@+id/spinnerMandal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:popupBackground="@drawable/register_spinner_background" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_chevron_down"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp" />
+
+        </FrameLayout>
+
+        <!-- Village Spinner (Right) -->
+        <FrameLayout
+            android:id="@+id/frameVillage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_spinner_background"
+            app:layout_constraintTop_toTopOf="@id/frameMandal"
+            app:layout_constraintStart_toEndOf="@id/frameMandal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.48"
+            android:layout_marginStart="8dp"
+            android:minHeight="56dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="40dp">
+
+            <Spinner
+                android:id="@+id/spinnerVillage"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:popupBackground="@drawable/register_spinner_background" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_chevron_down"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp" />
+
+        </FrameLayout>
+
+        <!-- OTP Input Field (Left) -->
+        <FrameLayout
+            android:id="@+id/frameOtp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_input_background"
+            app:layout_constraintTop_toBottomOf="@id/frameVillage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonSendOtp"
+            app:layout_constraintWidth_percent="0.65"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:minHeight="56dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_otp"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="#B3FFFFFF"
+                app:hintEnabled="true"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editOtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="@color/login_text_glow"
+                    android:textColorHint="#B3FFFFFF"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:background="@android:color/transparent"
+                    android:minHeight="56dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </FrameLayout>
+
+        <!-- SEND OTP Button (Right) -->
+        <Button
+            android:id="@+id/buttonSendOtp"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="@string/action_send_otp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:background="@drawable/register_button_send_otp"
+            android:elevation="4dp"
+            app:layout_constraintTop_toTopOf="@id/frameOtp"
+            app:layout_constraintStart_toEndOf="@id/frameOtp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.32"
+            android:layout_marginStart="8dp" />
+
+        <!-- REGISTER Button -->
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="@string/action_register"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:background="@drawable/login_button_teal"
+            android:elevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/frameOtp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:indeterminateTint="@color/login_text_glow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonSave"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="@color/admin_post_card_bg"
+    app:cardCornerRadius="8dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/splash_outline">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textActionDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Action description"
+                android:textColor="@color/admin_text_white"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/textActionTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 hours ago"
+                android:textColor="@color/admin_text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textActionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APPROVE"
+            android:textColor="@color/admin_card_green_border"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:background="@drawable/admin_post_card_background"
+            android:padding="6dp"
+            android:layout_marginStart="12dp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

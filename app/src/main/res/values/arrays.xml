@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="states_array">
+        <item>Andhra Pradesh</item>
+        <item>Telangana</item>
+        <item>Karnataka</item>
+        <item>Tamil Nadu</item>
+    </string-array>
+
+    <string-array name="default_regions_array">
+        <item>Select Option</item>
+    </string-array>
+
+    <string-array name="languages_array">
+        <item>Telugu</item>
+        <item>English</item>
+        <item>Hindi</item>
+    </string-array>
+</resources>
+

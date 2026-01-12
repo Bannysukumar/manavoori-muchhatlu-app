@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="@color/admin_post_card_bg"
+    app:cardCornerRadius="8dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/splash_outline">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textArticleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Article Title"
+                    android:textColor="@color/admin_text_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/textArticleMeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="By Author • 2 hours ago"
+                    android:textColor="@color/admin_text_secondary"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textArticleStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DRAFT"
+                android:textColor="@color/admin_card_yellow"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:background="@drawable/admin_post_card_background"
+                android:padding="6dp"
+                android:layout_marginStart="12dp" />
+
+        </LinearLayout>
+
+        <!-- Badges Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/badgeFeatured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FEATURED"
+                android:textColor="@color/admin_card_green_border"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:background="@drawable/admin_post_card_background"
+                android:padding="4dp"
+                android:layout_marginEnd="4dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/badgePinned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PINNED"
+                android:textColor="@color/admin_card_blue"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:background="@drawable/admin_post_card_background"
+                android:padding="4dp"
+                android:layout_marginEnd="4dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/badgeBreaking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BREAKING"
+                android:textColor="@color/admin_card_red"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:background="@drawable/admin_post_card_background"
+                android:padding="4dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Stats Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/textViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.2K views"
+                android:textColor="@color/admin_text_secondary"
+                android:textSize="11sp"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/textLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45 likes"
+                android:textColor="@color/admin_text_secondary"
+                android:textSize="11sp"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/textComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 comments"
+                android:textColor="@color/admin_text_secondary"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/buttonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_edit"
+                android:background="@drawable/admin_post_card_background"
+                android:textColor="@color/admin_text_white"
+                android:textSize="12sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_delete"
+                android:background="@drawable/admin_button_reject"
+                android:textColor="@color/admin_text_white"
+                android:textSize="12sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

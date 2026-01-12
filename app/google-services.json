@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "390619233741",
+    "project_id": "manavoori-muchhatlu",
+    "storage_bucket": "manavoori-muchhatlu.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390619233741:android:9c6f978394a143e0555884",
+        "android_client_info": {
+          "package_name": "com.manavoori.muchhatlu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSy1Gqnh00kvQb_nB6bffIJnNu8VldIIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

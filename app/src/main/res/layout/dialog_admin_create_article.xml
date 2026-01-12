@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTitle"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_article_title"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="@color/splash_outline"
+            app:hintTextColor="@color/admin_text_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/admin_text_white"
+                android:textColorHint="@color/admin_text_secondary"
+                android:inputType="text"
+                android:maxLines="2" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Content -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutContent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_article_content"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="@color/splash_outline"
+            app:hintTextColor="@color/admin_text_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputContent"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:textColor="@color/admin_text_white"
+                android:textColorHint="@color/admin_text_secondary"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:scrollbars="vertical" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Excerpt -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutExcerpt"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_article_excerpt"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="@color/splash_outline"
+            app:hintTextColor="@color/admin_text_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputExcerpt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/admin_text_white"
+                android:textColorHint="@color/admin_text_secondary"
+                android:inputType="textMultiLine"
+                android:maxLines="3" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Category -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutCategory"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_article_category"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="@color/splash_outline"
+            app:hintTextColor="@color/admin_text_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/admin_text_white"
+                android:textColorHint="@color/admin_text_secondary"
+                android:inputType="text"
+                android:focusable="false"
+                android:clickable="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Tags -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTags"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_article_tags"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="@color/splash_outline"
+            app:hintTextColor="@color/admin_text_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/admin_text_white"
+                android:textColorHint="@color/admin_text_secondary"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Status Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_article_status"
+            android:textColor="@color/admin_text_white"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleGroupStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDraft"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_article_draft"
+                app:strokeColor="@color/admin_card_yellow"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPublished"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_article_published"
+                app:strokeColor="@color/admin_card_green_border"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonScheduled"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_article_scheduled"
+                app:strokeColor="@color/admin_card_blue"
+                app:strokeWidth="1dp" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!-- Schedule Date (visible when Scheduled is selected) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutScheduleDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_schedule_date"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:boxStrokeColor="@color/splash_outline"
+            app:hintTextColor="@color/admin_text_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputScheduleDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/admin_text_white"
+                android:textColorHint="@color/admin_text_secondary"
+                android:inputType="datetime"
+                android:focusable="false"
+                android:clickable="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Feature Options -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchFeatured"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_article_featured"
+                android:textColor="@color/admin_text_white"
+                app:thumbTint="@color/admin_card_green_border"
+                app:trackTint="@color/admin_card_green_border" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchPinned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_article_pinned"
+                android:textColor="@color/admin_text_white"
+                app:thumbTint="@color/admin_card_green_border"
+                app:trackTint="@color/admin_card_green_border" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchBreaking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_article_breaking"
+                android:textColor="@color/admin_text_white"
+                app:thumbTint="@color/admin_card_green_border"
+                app:trackTint="@color/admin_card_green_border" />
+
+        </LinearLayout>
+
+        <!-- Breaking News Expiry (visible when Breaking is enabled) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutBreakingExpiry"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_breaking_expiry"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:boxStrokeColor="@color/splash_outline"
+            app:hintTextColor="@color/admin_text_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputBreakingExpiry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/admin_text_white"
+                android:textColorHint="@color/admin_text_secondary"
+                android:inputType="datetime"
+                android:focusable="false"
+                android:clickable="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- SEO Fields -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEO Settings"
+            android:textColor="@color/admin_text_white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutMetaTitle"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_article_meta_title"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="@color/splash_outline"
+            app:hintTextColor="@color/admin_text_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputMetaTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/admin_text_white"
+                android:textColorHint="@color/admin_text_secondary"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutMetaDescription"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_article_meta_description"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="@color/splash_outline"
+            app:hintTextColor="@color/admin_text_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputMetaDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/admin_text_white"
+                android:textColorHint="@color/admin_text_secondary"
+                android:inputType="textMultiLine"
+                android:maxLines="3" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Media Buttons -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media"
+            android:textColor="@color/admin_text_white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/buttonAddImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/action_add_image"
+                android:background="@drawable/admin_button_approve"
+                android:textColor="@color/admin_text_white"
+                android:textSize="12sp"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/buttonAddVideo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/action_add_video"
+                android:background="@drawable/admin_button_approve"
+                android:textColor="@color/admin_text_white"
+                android:textSize="12sp"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/buttonAddGallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/action_add_gallery"
+                android:background="@drawable/admin_button_approve"
+                android:textColor="@color/admin_text_white"
+                android:textSize="12sp"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <!-- Media Preview -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMediaPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>
+
